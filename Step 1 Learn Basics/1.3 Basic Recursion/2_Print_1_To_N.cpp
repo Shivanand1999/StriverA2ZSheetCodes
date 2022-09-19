@@ -19,5 +19,5 @@ void print_1_to_N(int i, int n){
 int main(){
     int n;
     cin >> n;
-    print_1_to_N(1,n);
+    print_1_to_N(1,n);  // In case of backtracking:     print_1_to_N(n,n);
 }
