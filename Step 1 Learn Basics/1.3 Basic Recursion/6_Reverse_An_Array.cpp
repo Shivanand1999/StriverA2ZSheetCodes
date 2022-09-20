@@ -37,11 +37,20 @@ void reverseArray(int arr[], int start, int end){
         swap(arr[start], arr[end]);
         reverseArray(arr, start+1, end-1);
     }
+    printArray(arr,n);
+}
+
+void reverseArray(int i, int arr[], int n){
+    if(i>=n/2) return ;
+    swap(arr[i], arr[n-i-1]);
+    reverseArray(i+1, arr, n);
+    printArray(arr,n);
 }
 */
 //Reverse array using library function: T = O(n), S = O(1)
 void reverseArray(int arr[], int n){
     reverse(arr, arr+n);
+    printArray(arr,n);
 }
 
 
@@ -49,8 +58,6 @@ int main(){
     int n;
     cin >> n;
     int arr[n];
-    for(int i=0;i<n;i++){
-        cin >> arr[i];
-    }
+    for(int i=0;i<n;i++)  cin >> arr[i];
     reverseArray(arr,n);
 }
