@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+// Time Complexity T = O(nlogn), S = O(n)
 class Solution{
 public:
     void merge(int arr[], int left, int mid, int right){
@@ -66,7 +68,7 @@ int main(){
     }
 
     cout << endl;
-    
+
     obj.mergeSort(arr, 0, n-1);
 
     cout << "After Merge Sort Algorithm: ";
