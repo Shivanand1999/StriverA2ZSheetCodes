@@ -14,6 +14,8 @@ void secondSmallestAndLargest(int arr[], int n){
 }
 */
 
+
+// T = O(n), S = O(n)
 void secondSmallestAndLargest(int arr[], int n){
     if(n==0 || n==1) cout << -1 << " " <<" " << endl;
     int small = INT_MAX, second_small = INT_MAX;
