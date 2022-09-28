@@ -26,7 +26,7 @@ void intersectionOfTwoArrays(int arr1[], int n, int arr2[], int m){
 
 //Using Two Pointer Approach T = O(n), S = O(1)
 void intersectionOfTwoArrays(int arr1[], int n, int arr2[], int m){
-    vector<int> intersectionVector;
+    vector<int> ans;
     int i=0, j=0;           //to traverse the arrays
     while(i<n && j<m){
         if(arr1[i]<arr2[j]){       //if current element in i is smaller
@@ -34,14 +34,14 @@ void intersectionOfTwoArrays(int arr1[], int n, int arr2[], int m){
         }else if(arr2[j]<arr1[i]){
             j++;
         }else{
-            intersectionVector.push_back(arr1[i]);          // both elements are equal
+            ans.push_back(arr1[i]);          // both elements are equal
             i++;
             j++;
         }
     }
     cout<<"The elements are: ";
-    for(int i=0; i<intersectionVector.size();i++){
-        cout << intersectionVector[i] << " ";
+    for(int i=0; i<ans.size();i++){
+        cout << ans[i] << " ";
     }
 }
 
